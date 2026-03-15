@@ -51,7 +51,6 @@ while True:
         print("Enter a valid number!\n")
         continue
     if guess==num:
-        attempt+=1
         print(f"You won!\n{attempt} attempts\n{game_lives} lives left")
         break
     elif guess>num:
