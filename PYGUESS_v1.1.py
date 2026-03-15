@@ -42,6 +42,8 @@ while True:
 num=random.randint(1,max_digit)
 print(f"\nYou choose {gmode} \nyou have {game_lives} lives\n")
 while True:
+    game_lives-=1
+    attempt+=1
     rndm=random.randint(1,4)
     try:
         guess=int(input("Choose your guess: "))
@@ -54,20 +56,12 @@ while True:
         break
     elif guess>num:
         if guesser(1):
-            game_lives-=1
-            attempt+=1
             continue
         print(f"Maybe go lower\nlives left: {game_lives}\n")
-        game_lives-=1
-        attempt+=1
     elif guess<num:
         if guesser(1):
-            game_lives-=1
-            attempt+=1
             continue
         print(f"Maybe go higher\nlives left: {game_lives}\n")
-        game_lives-=1
-        attempt+=1
     if game_lives==0:
         print(f"\nYou lose!\nThe number was {num}\n")
         break
