@@ -22,17 +22,17 @@ def guesser(anti_guess):
         return False
 while True:
     mode_ask=input("Choose your gamemode: Hardcore / Average / Babymode\n:").lower()
-    if mode_ask=="hardcore" or "1":
+    if mode_ask=="hardcore" or mode_ask=="1":
         game_lives=10
         max_digit=10000
         gmode="Hardcore mode"
         break
-    elif mode_ask=="average" or "2":
+    elif mode_ask=="average" or mode_ask=="2":
         game_lives=15
         max_digit=1000
         gmode="Average mode"
         break
-    elif mode_ask=="babymode" or "3":
+    elif mode_ask=="babymode" or mode_ask=="3":
         game_lives=75
         max_digit=10
         gmode="Babymode"
